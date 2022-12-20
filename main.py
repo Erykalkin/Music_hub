@@ -420,11 +420,14 @@ class Window(QWidget):
             self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile(song[2])))
 
     def set_panel_icon(self):
-        icon = self.MediaW.strings[self.player.playlist().currentIndex()].image_path
-        self.front_image.setStyleSheet("border-radius: 10px; border-image: url({})".format(icon))
-        self.blur_image.setStyleSheet("border-radius: 10px; border-image: url('{}')".format(icon))
-        self.song_name.setText(self.MediaW.strings[self.player.playlist().currentIndex()].name)
-        self.song_author.setText(self.MediaW.strings[self.player.playlist().currentIndex()].author)
+        try:
+            icon = self.MediaW.strings[self.player.playlist().currentIndex()].image_path
+            self.front_image.setStyleSheet("border-radius: 10px; border-image: url({})".format(icon))
+            self.blur_image.setStyleSheet("border-radius: 10px; border-image: url('{}')".format(icon))
+            self.song_name.setText(self.MediaW.strings[self.player.playlist().currentIndex()].name)
+            self.song_author.setText(self.MediaW.strings[self.player.playlist().currentIndex()].author)
+        except IndexError:
+            pass
 
     def add_to_playlist_beginning(self, song):
         self.player.playlist().addMedia(QMediaContent(QUrl.fromLocalFile(song[2])))
