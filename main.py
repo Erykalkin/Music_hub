@@ -61,7 +61,7 @@ class Window(QWidget):
         '''Виджет подложка c фоном'''
         self.background = QLabel(self)
         #self.background.setStyleSheet("QWidget{background-color: rgb(100, 100, 100, 0)}")
-        self.background.setStyleSheet("border-radius: 10px; border-image: url('image/img.png')")
+        self.background.setStyleSheet("border-radius: 10px; border-image: url('image/img_4.png')")
 
         '''Создаём тулбар'''
         self.bar = QWidget(self)
@@ -78,7 +78,7 @@ class Window(QWidget):
         self.SearchW = SearchWindow(self)
         self.SettingsW = SettingsWindow(self)
         #self.HomeW.show()
-        self.MediaW.hide()
+        self.MediaW.show()
         self.SearchW.hide()
         self.SettingsW.hide()
 
