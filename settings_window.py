@@ -1,10 +1,6 @@
-import sys
-import random
-import os
 import json
-from PyQt5.QtWidgets import QWidget, QApplication, QScrollArea, QHBoxLayout, QMenuBar, QVBoxLayout, QLabel, QGroupBox, QFrame, QMainWindow, QGridLayout, QSplitter, QPushButton, QToolTip, QFileDialog
-from PyQt5.QtCore import Qt, QMimeDatabase, QRect, QEvent, QVariantAnimation, QAbstractAnimation, QPropertyAnimation, QSize, QEasingCurve
-from PyQt5.QtGui import QPixmap, QColor, QFontDatabase, QPainter, QPen, QIcon, QImage
+from PyQt5.QtWidgets import QWidget, QScrollArea, QHBoxLayout, QVBoxLayout, QLabel, QGroupBox, QGridLayout, QPushButton
+from PyQt5.QtCore import Qt
 
 
 with open('config.json', 'r') as f:
@@ -138,11 +134,13 @@ class ThemeButton(QPushButton):
     def mousePressEvent(self, event):   # :))))))))))))))))))))))))))))))))))))))))
         global config
         if self.connection.theme == 'light theme':
+            self.connection.theme == 'dark theme'
             config['mode'] = 'dark theme'
             with open('config.json', 'w') as f1:
                 json.dump(config, f1, indent=1)
             self.connection.restyle()
         else:
+            self.connection.theme == 'light theme'
             config['mode'] = 'light theme'
             with open('config.json', 'w') as f1:
                 json.dump(config, f1, indent=1)

@@ -1,11 +1,6 @@
-import sys
-import random
-import os
 import json
-from PyQt5.QtWidgets import QWidget, QScrollArea, QApplication, QGraphicsBlurEffect, QHBoxLayout, QMenuBar, QVBoxLayout, QLabel, QGroupBox, QFrame, QMainWindow, QGridLayout, QSplitter, QPushButton, QToolTip, QFileDialog
-from PyQt5.QtCore import Qt, QUrl, QMimeDatabase, QRect, QEvent, QVariantAnimation, QAbstractAnimation, QPropertyAnimation, QSize, QEasingCurve
-from PyQt5.QtGui import QPixmap, QColor, QFontDatabase, QPainter, QPen, QIcon, QImage
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+from PyQt5.QtWidgets import QWidget, QScrollArea, QVBoxLayout, QLabel
+from PyQt5.QtCore import Qt
 from media import SongString
 import data_base
 

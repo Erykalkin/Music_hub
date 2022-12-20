@@ -1,9 +1,9 @@
 {
     "light theme": {
     "window": {
-      "bar": "QWidget{background-color:rgb(40, 40, 40, 0.9)}",
+      "bar": "QWidget{background-color:rgb(200, 200, 200, 0.9)}",
       "content_window": "QWidget{background-color: rgb(50, 50, 50, 0.7)}",
-      "panel": "QWidget{background-color:rgb(40, 40, 40, 0.9)}",
+      "panel": "QWidget{background-color:rgb(200, 200, 200, 0.9)}",
       "slider": "QSlider{background: rgb(0, 0, 0, 0);} QSlider::groove:horizontal {height: 10px; margin: 0px; border-radius: 5px; background: rgb(0, 0, 0, 0.5);} QSlider::handle:horizontal {background: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255); width: 16px; margin-bottom: -3px; margin-top: -3px; border-radius: 8px;} QSlider::sub-page:qlineargradient {background: rgb(28, 211, 162); border-radius: 5px;}",
       "icons": "QPushButton:!hover {background-color: rgb(0, 0, 0, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(255, 255, 255); text-align:center} QPushButton:hover{background-color: rgb(70, 70, 70, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(221, 128, 204); text-align:center} QPushButton:pressed{background-color: rgb(100, 100, 100, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(153, 50, 204); text-align:center}",
       "icons+": "QPushButton:!hover {background-color: rgb(0, 0, 0, 0); border-radius: 0px; border-bottom: 3px solid rgb(28, 211, 162); padding-bottom: 0px; border-top: 3px solid rgb(28, 211, 162, 0); padding-top: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(28, 211, 162); text-align:center} QPushButton:hover{background-color: rgb(70, 70, 70, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(221, 128, 204); text-align:center} QPushButton:pressed{background-color: rgb(100, 100, 100, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(153, 50, 204); text-align:center}",
@@ -25,10 +25,10 @@
     "settings_window": {
       "string": "QGroupBox {font: 13pt; font-family: 'Franklin Gothic'; color: rgb(255, 255, 255); border-radius: 0px; border-top: 3px solid rgb(28, 211, 162); margin-top: 15px; background-color: rgb(60, 60, 60, 0)} QGroupBox::title {subcontrol-origin: margin; padding: 0px 10px 0px 0px} QLabel {font: 10pt; font-family: 'Franklin Gothic'; color: rgb(255, 255, 255); background-color:rgb(0, 0, 0, 0)}",
       "theme_button_image": {
-        "c0": "QLabel {background-color: rgb(0, 0, 0)}; border-radius: 10px}",
-        "c1": "QLabel {background-color: rgb(50, 50, 50); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px}",
-        "c2": "QLabel {background-color: rgb(60, 60, 60); border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 10px; border-bottom-right-radius: 10px}}",
-        "c3": "QLabel {background-color: rgb(40, 40, 40); border-radius: 5px}"
+        "c0": "QLabel {background-color: rgb(255, 255, 255)}; border-radius: 10px}",
+        "c1": "QLabel {background-color: rgb(200, 200, 200); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px}",
+        "c2": "QLabel {background-color: rgb(255, 255, 255); border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 10px; border-bottom-right-radius: 10px}}",
+        "c3": "QLabel {background-color: rgb(150, 150, 150); border-radius: 5px}"
       }
     },
     "my_library": {

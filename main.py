@@ -1,18 +1,12 @@
 import sys
-import random
-import os
 import json
-from PyQt5.QtWidgets import QWidget, QSlider, QCompleter, QStackedLayout, QGraphicsBlurEffect, QApplication, QHBoxLayout, QMenuBar, QVBoxLayout, QLabel, QGroupBox, QFrame, QMainWindow, QGridLayout, QSplitter, QPushButton, QToolTip, QFileDialog, QSizeGrip
-from PyQt5.QtCore import Qt, QUrl, QMimeDatabase, QRect, QEvent, QVariantAnimation, QAbstractAnimation, QPropertyAnimation, QSize, QEasingCurve
-from PyQt5.QtGui import QPixmap, QColor, QFontDatabase, QPainter, QPen, QIcon, QImage, QFocusEvent
+from PyQt5.QtWidgets import QWidget, QSlider, QCompleter, QGraphicsBlurEffect, QApplication, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout, QPushButton
+from PyQt5.QtCore import Qt, QUrl, QEvent, QSize
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
-import qtawesome as qta
-from home_window import HomeWindow
 from my_library import MyMediaWindow
 from search_window import SearchWindow
 from settings_window import SettingsWindow
 from control_button import ControlButton
-from media import Playlist, SongString
 import data_base
 
 
@@ -79,11 +73,11 @@ class Window(QWidget):
         self.bar_layout.setAlignment(Qt.AlignVCenter)
 
         '''Создаём менюшки'''
-        self.HomeW = HomeWindow(self)
+        #self.HomeW = HomeWindow(self)
         self.MediaW = MyMediaWindow(self)
         self.SearchW = SearchWindow(self)
         self.SettingsW = SettingsWindow(self)
-        self.HomeW.show()
+        #self.HomeW.show()
         self.MediaW.hide()
         self.SearchW.hide()
         self.SettingsW.hide()
@@ -112,7 +106,7 @@ class Window(QWidget):
 
         '''Создаём окно контента'''
         #self.main_layout.addWidget(self.content_window)
-        self.main_layout.addWidget(self.HomeW)
+        #self.main_layout.addWidget(self.HomeW)
         self.main_layout.addWidget(self.MediaW)
         self.main_layout.addWidget(self.SearchW)
         self.main_layout.addWidget(self.SettingsW)
@@ -188,9 +182,9 @@ class Window(QWidget):
         '''Создаём кнопки для менюшек тулбара'''
         self.bar_layout.addWidget(self.left_window_control)
 
-        self.HomeW_button = QPushButton('Главное Меню', self.bar)
+        self.HomeW_button = QPushButton('Главное Меню')
         self.HomeW_button.setFixedHeight(70)
-        self.bar_layout.addWidget(self.HomeW_button)
+        #self.bar_layout.addWidget(self.HomeW_button)
 
         self.MediaW_button = QPushButton('Моя Медиатека', self.bar)
         self.MediaW_button.setFixedHeight(70)
@@ -209,7 +203,7 @@ class Window(QWidget):
         '''Функционал кнопок'''
         @self.HomeW_button.clicked.connect
         def slot():
-            self.HomeW.show()
+            #self.HomeW.show()
             self.MediaW.hide()
             self.SearchW.hide()
             self.SettingsW.hide()
@@ -220,7 +214,7 @@ class Window(QWidget):
 
         @self.MediaW_button.clicked.connect
         def slot():
-            self.HomeW.hide()
+            #self.HomeW.hide()
             self.MediaW.show()
             self.SearchW.hide()
             self.SettingsW.hide()
@@ -231,7 +225,7 @@ class Window(QWidget):
 
         @self.SearchW_button.clicked.connect
         def slot():
-            self.HomeW.hide()
+            #self.HomeW.hide()
             self.MediaW.hide()
             self.SearchW.show()
             self.SettingsW.hide()
@@ -242,7 +236,7 @@ class Window(QWidget):
 
         @self.SettingsW_button.clicked.connect
         def slot():
-            self.HomeW.hide()
+            #self.HomeW.hide()
             self.MediaW.hide()
             self.SearchW.hide()
             self.SettingsW.show()
@@ -270,7 +264,7 @@ class Window(QWidget):
 
     def restyle(self):
         global config
-        self.HomeW.set_style()
+        #self.HomeW.set_style()
         self.MediaW.set_style()
         self.SearchW.set_style()
         self.SettingsW.set_style()
@@ -280,7 +274,7 @@ class Window(QWidget):
         self.song_name.setStyleSheet(style[config['mode']]['my_library']['song_name'])
         self.song_author.setStyleSheet(style[config['mode']]['my_library']['author'])
 
-        self.HomeW_button.setStyleSheet(style[config['mode']]['window']['icons'])
+        #self.HomeW_button.setStyleSheet(style[config['mode']]['window']['icons'])
         self.MediaW_button.setStyleSheet(style[config['mode']]['window']['icons'])
         self.SearchW_button.setStyleSheet(style[config['mode']]['window']['icons'])
         self.SettingsW_button.setStyleSheet(style[config['mode']]['window']['icons'])
@@ -346,6 +340,7 @@ class Window(QWidget):
 
     def shuffle(self):
         self.player.playlist().shuffle()
+        self.shuffling = True
 
     def connect_slider_with_player(self):
         if self.player.position() > 0:

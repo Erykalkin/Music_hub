@@ -1,12 +1,6 @@
-import sys
-import random
-import os
 import json
-from PyQt5.QtWidgets import QWidget, QSlider, QCompleter, QStackedLayout, QGraphicsBlurEffect, QApplication, QHBoxLayout, QMenuBar, QVBoxLayout, QLabel, QGroupBox, QFrame, QMainWindow, QGridLayout, QSplitter, QPushButton, QToolTip, QFileDialog, QSizeGrip
-from PyQt5.QtCore import Qt, QUrl, QMimeDatabase, QRect, QEvent, QVariantAnimation, QAbstractAnimation, QPropertyAnimation, QSize, QEasingCurve
-from PyQt5.QtGui import QPixmap, QColor, QFontDatabase, QPainter, QPen, QIcon, QImage, QFocusEvent
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
-import qtawesome as qta
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel
+from PyQt5.QtCore import Qt
 
 
 with open('config.json', 'r') as f:
