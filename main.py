@@ -105,8 +105,6 @@ class Window(QWidget):
         self.right_window_control_layout.addWidget(self.exit_button)
 
         '''Создаём окно контента'''
-        #self.main_layout.addWidget(self.content_window)
-        #self.main_layout.addWidget(self.HomeW)
         self.main_layout.addWidget(self.MediaW)
         self.main_layout.addWidget(self.SearchW)
         self.main_layout.addWidget(self.SettingsW)
@@ -139,6 +137,7 @@ class Window(QWidget):
         self.shuffle_button = QPushButton(self)
         self.sound_button = QPushButton(self)
 
+        '''Сигналы кнопок управления'''
         self.play_button.clicked.connect(self.play_or_pause)
         self.left_skip_button.clicked.connect(lambda: self.player.playlist().previous())
         self.right_skip_button.clicked.connect(lambda: self.player.playlist().next())
@@ -159,6 +158,7 @@ class Window(QWidget):
 
         '''Слайдер'''
         self.slider = QSlider(Qt.Horizontal, self)
+        self.slider.setFixedHeight(20)
         self.panel_layout.addWidget(self.slider, 0, 1)
         self.slider.sliderMoved.connect(self.connect_player_with_slider)
         self.slider.sliderPressed.connect(lambda: self.player.pause())
@@ -168,7 +168,7 @@ class Window(QWidget):
         self.fb_sl.setContentsMargins(0, 0, 0, 0)
         self.fb_sl.setStyleSheet("QWidget {background-color: rgb(0, 0, 0, 0)}")
         self.fb_sl_layout = QVBoxLayout(self.fb_sl)
-        self.fb_sl_layout.setSpacing(30)
+        self.fb_sl_layout.setSpacing(20)
         self.fb_sl_layout.addWidget(self.function_bar, alignment=Qt.AlignHCenter)
         self.fb_sl_layout.addWidget(self.slider)
         self.panel_layout.addWidget(self.fb_sl, 0, 2)
