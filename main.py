@@ -164,7 +164,7 @@ class Window(QWidget):
         self.slider.sliderPressed.connect(lambda: self.player.pause())
         self.slider.sliderReleased.connect(lambda: self.player.play())
 
-        self.fb_sl = QWidget()
+        self.fb_sl = QWidget()  # виджет-подложка со слайдером и элементами управления
         self.fb_sl.setContentsMargins(0, 0, 0, 0)
         self.fb_sl.setStyleSheet("QWidget {background-color: rgb(0, 0, 0, 0)}")
         self.fb_sl_layout = QVBoxLayout(self.fb_sl)

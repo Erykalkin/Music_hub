@@ -132,7 +132,8 @@ class ThemeButton(QPushButton):
         self.w4.setStyleSheet(style[self.theme]["settings_window"]["theme_button_image"]["c3"])
 
     def mousePressEvent(self, event):   # :))))))))))))))))))))))))))))))))))))))))
-        global config
+        pass
+        """global config
         if self.connection.theme == 'light theme':
             self.connection.theme == 'dark theme'
             config['mode'] = 'dark theme'
@@ -144,7 +145,7 @@ class ThemeButton(QPushButton):
             config['mode'] = 'light theme'
             with open('config.json', 'w') as f1:
                 json.dump(config, f1, indent=1)
-            self.connection.restyle()
+            self.connection.restyle()"""
 
     def mouseMoveEvent(self, event):
         pass
