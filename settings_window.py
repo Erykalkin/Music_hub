@@ -131,7 +131,7 @@ class ThemeButton(QPushButton):
         self.w3.setStyleSheet(style[self.theme]["settings_window"]["theme_button_image"]["c3"])
         self.w4.setStyleSheet(style[self.theme]["settings_window"]["theme_button_image"]["c3"])
 
-    def mousePressEvent(self, event):   # :))))))))))))))))))))))))))))))))))))))))
+    def mousePressEvent(self, event):   # :)))))))))))))))))))))))))))))))))))))))))
         pass
         """global config
         if self.connection.theme == 'light theme':
