@@ -1,8 +1,8 @@
 {
     "light theme": {
     "window": {
-      "bar": "QWidget{background-color:rgb(200, 200, 200, 0.9)}",
-      "content_window": "QWidget{background-color: rgb(50, 50, 50, 0.7)}",
+      "bar": "QWidget{background-color:rgb(150, 150, 150, 0.9)}",
+      "content_window": "QWidget{background-color: rgb(200, 200, 200, 0.7)}",
       "panel": "QWidget{background-color:rgb(200, 200, 200, 0.9)}",
       "slider": "QSlider{background: rgb(0, 0, 0, 0);} QSlider::groove:horizontal {height: 10px; margin: 0px; border-radius: 5px; background: rgb(0, 0, 0, 0.5);} QSlider::handle:horizontal {background: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255); width: 16px; margin-bottom: -3px; margin-top: -3px; border-radius: 8px;} QSlider::sub-page:qlineargradient {background: rgb(28, 211, 162); border-radius: 5px;}",
       "icons": "QPushButton:!hover {background-color: rgb(0, 0, 0, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(255, 255, 255); text-align:center} QPushButton:hover{background-color: rgb(70, 70, 70, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(221, 128, 204); text-align:center} QPushButton:pressed{background-color: rgb(100, 100, 100, 0); border-radius: 0px; font: 13pt; font-family: 'Franklin Gothic'; color: rgb(153, 50, 204); text-align:center}",

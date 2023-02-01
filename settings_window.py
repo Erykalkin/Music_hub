@@ -44,7 +44,7 @@ class SettingsWindow(QLabel):
         self.widget_layout.addWidget(self.theme_widget)
 
         self.themes = []
-        self.th1 = ThemeButton(self.widget, "Тёмная тема", "dark theme")
+        self.th1 = ThemeButton(self.widget, "Тёмная тема", "dark theme", connection=self.connection)
         self.themes.append(self.th1)
         self.theme_widget_layout.addWidget(self.th1, 1, 0)
 
@@ -131,21 +131,19 @@ class ThemeButton(QPushButton):
         self.w3.setStyleSheet(style[self.theme]["settings_window"]["theme_button_image"]["c3"])
         self.w4.setStyleSheet(style[self.theme]["settings_window"]["theme_button_image"]["c3"])
 
-    def mousePressEvent(self, event):   # :)))))))))))))))))))))))))))))))))))))))))
+    def mousePressEvent(self, event):
         pass
-        """global config
-        if self.connection.theme == 'light theme':
-            self.connection.theme == 'dark theme'
+        global config
+        if config['mode'] == 'light theme':
             config['mode'] = 'dark theme'
             with open('config.json', 'w') as f1:
                 json.dump(config, f1, indent=1)
             self.connection.restyle()
         else:
-            self.connection.theme == 'light theme'
             config['mode'] = 'light theme'
             with open('config.json', 'w') as f1:
                 json.dump(config, f1, indent=1)
-            self.connection.restyle()"""
+            self.connection.restyle()
 
     def mouseMoveEvent(self, event):
         pass

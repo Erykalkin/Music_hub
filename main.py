@@ -21,8 +21,6 @@ class Window(QWidget):
     def __init__(self, app):
         super().__init__()
 
-        self.theme = config['mode']
-
         '''Плеер'''
         self.player = QMediaPlayer(self)
         self.player.setNotifyInterval(10)
@@ -263,7 +261,9 @@ class Window(QWidget):
         self.restyle()
 
     def restyle(self):
-        global config
+        with open('config.json', 'r') as f:
+            config = json.load(f)
+
         #self.HomeW.set_style()
         self.MediaW.set_style()
         self.SearchW.set_style()
@@ -286,6 +286,7 @@ class Window(QWidget):
         self.sound_button.setStyleSheet(style[config['mode']]['window']['sound'])
 
         self.update()
+        self.bar.update()
 
     def resizeEvent(self, event):
         x = self.size().width()
