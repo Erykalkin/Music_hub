@@ -439,5 +439,3 @@ def application():
 
 if __name__ == "__main__":
     application()
-
-# C:\Users\George.LAPTOP-TLP259VH\Music_hub\venv\Scripts\qta-browser.exe
